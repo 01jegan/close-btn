@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>pop-up box</title>
+</head>
+<style>
+	*{
+		margin: 0 auto;
+		text-align: center;
+	}
+	.box1{
+		height: 250px;
+		width: 200px;
+		background: #fff;
+		margin: 0 auto;
+		box-shadow: 0 0 10px 10px #ccc;
+		padding: 10px;
+		text-align: center;
+		background: lightcoral;
+		position:relative;
+	}
+	svg{
+	position:relative;
+	top:0px;
+	left:86px;
+	}
+	input{
+		padding: 10px;
+		height: 100px;
+		widows: 100px;
+	}
+	button{
+		margin: 10px;
+		padding: 10px;
+		background: #ccc;
+	}
+	.box{
+		display: none;
+	}
+	.b{
+		margin: 0 auto;
+		text-align: center;
+		background: lightblue;
+		padding: 10px;
+		margin: 20px 0;
+	}
+	svg:hover{
+	color:red;
+	}
+</style>
+<body>
+	<button onclick="mine()" class="b">click</button>
+	<div class="box">
+		<div class="box1">
+		
+		<svg xmlns="http://www.w3.org/2000/svg" onclick="mine4()" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"/></svg>
+			<h1>Welcome</h1>
+
+			<input type="text" name="tex">
+
+			<button onclick="mine2()">close</button>
+			<button onclick="mine3()">save</button>
+		</div>
+	</div>
+
+
+
+<script>
+	let a=document.querySelector(".box");
+
+	
+	function mine(){
+		a.style.display="block";
+		setTimeout (function(){
+		a.style.display="none"
+	},1000)
+	}
+	// function mine2(){
+	// 	a.style.display="none";
+	// }
+	// function mine3(){
+	// 	a.style.display="none";
+	// }
+	// function mine4(){
+	// 	a.style.display="none";
+	// }
+</script>
+</body>
+</html>
